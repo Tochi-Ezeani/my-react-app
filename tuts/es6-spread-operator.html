@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ES6 Spread Operator</title>
+</head>
+<body>
+  <p>Press F12 and see the result object in the console view.</p>
+
+  <script>
+    // const numberOne = [1, 2, 3];
+    // const numberTwo = [4, 5, 6];
+    // const numbersCombined = [...numberOne, ...numberTwo];
+
+    // document.write(numbersCombined);
+
+    // const numbers = [1, 2, 3, 4, 5, 6];
+    // const [one, two, ...rest] = numbers;
+
+    // document.write(`<p>${one}</p>`);
+    // document.write(`<p>${two}</p>`);
+    // document.write(`<p>${rest}</p>`);
+
+    const myVehicle = {
+      brand: 'Ford',
+      model: 'Mustang',
+      color: 'red'
+    }
+
+    const updateMyVehicle = {
+      type: 'car',
+      year: 2021,
+      color: 'yellow'
+    }
+
+    const myUpdatedVehicle = {...myVehicle, ...updateMyVehicle};
+
+    document.write(myUpdatedVehicle);
+    console.log(myUpdatedVehicle);
+  </script>
+</body>
+</html>
