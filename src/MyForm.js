@@ -1,53 +1,17 @@
 import { useState } from "react";
 
 function MyForm() {
-  // const [name, setName] = useState("");
-
-  const [inputs, setInputs] = useState({});
+  const [textArea, setTextArea] = useState(
+    "The content of a textarea goes in the value attribute"
+  );
 
   const handleChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    setInputs(values => ({...values, [name]: value}));
-  }
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // alert(`The name you entered was: ${name}`);
-    console.log(inputs);
+    setTextArea(event.target.value);
   }
   
-  // return (
-  //   <form>
-  //     <label>Enter your name:
-  //       <input type="text" />
-  //     </label>
-  //   </form>
-  // );
-
   return (
-    <form onSubmit={handleSubmit}>
-      <label>Enter your name:
-        <input 
-          type="text"
-          name="username"
-          // value={name}
-          value={inputs.username || ""}
-          // onChange={(e) => setName(e.target.value)}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>Enter your age:
-        <input
-          type="number"
-          name="age"
-          value={inputs.age || ""}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <input type="submit" />
+    <form>
+      <textarea value={textArea} onChange={handleChange} />
     </form>
   );
 }
