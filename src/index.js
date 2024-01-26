@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 // import Car from './Car.js';
 // import Garage from './Garage.js';
-import Football from './Football';
+// import Football from './Football';
+import MyForm from './MyForm';
 
 // const myFirstElement = <h1>Hello React!</h1>;
 
@@ -59,5 +60,29 @@ import Football from './Football';
 //   );
 // }
 
+// function MissedGoal() {
+//   return <h1>MISSED</h1>;
+// }
+
+// function MadeGoal() {
+//   return <h1>GOAL!</h1>
+// }
+
+// function Goal(props) {
+//   const isGoal = props.isGoal;
+//   // if (isGoal) {
+//   //   return <MadeGoal />;
+//   // }
+//   // return <MissedGoal />;
+//   return (
+//     <>
+//       { isGoal ? <MadeGoal /> : <MissedGoal /> }
+//     </>
+//   );
+// }
+
+// const cars = ['Ford', 'BMW', 'Audi'];
+// const cars = [];
 const root = ReactDOM.createRoot(document.querySelector("#root"));
-root.render(<Football />);
+// root.render(<Goal isGoal={ false } />);
+root.render(<MyForm />);
