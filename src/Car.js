@@ -1,7 +1,7 @@
-function Car(props) {
-  // return <h2>Hi, I am a Car!</h2>;
-  // return <h2>I am a { props.brand.model }!</h2>;
-  return <li>I am a { props.brand }</li>;
+import style from './my-style.module.css';
+
+const Car = () => {
+  return <h1 style={style.bigblue}>Hello Car!</h1>;
 }
 
 export default Car;
